@@ -1,18 +1,18 @@
 version: 0.2
 phases: 
-  pre_build: 
+  post_build: 
     commands: 
-      - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"zawye21\" --password=\"n0thing.\""
+      - "echo Build completed on `date`"
+      - "echo Pushing the Docker image..."
+      - "docker push zawye21/simple:latest"
   build: 
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "docker build -t zawye21/simple ."
       - "docker tag zawye21/simple zawye21/simple:latest"
-  post_build: 
+  pre_build: 
     commands: 
-      - "echo Build completed on `date`"
-      - "echo Pushing the Docker image..."
-      - "docker push zawye21/simple:latest"
+      - "echo Logging in to Docker Hub..."
+      - "docker login --username=\"zawye21\" --password=\"n0thing.\""
 

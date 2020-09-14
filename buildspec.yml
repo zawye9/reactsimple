@@ -8,7 +8,7 @@ phases:
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "docker build -t dvohra/node-server ."
+      - "docker build -t zawye21/simple ."
       - "docker tag zawye21/simple zawye21/simple:latest"
   post_build: 
     commands: 

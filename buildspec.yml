@@ -1,4 +1,4 @@
-version: 0.2
+---
 phases: 
   post_build: 
     commands: 
@@ -14,5 +14,6 @@ phases:
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"zawye21\" --password=\"n0thing.\""
+      - "docker login --username=zawye21 --password=n0thing."
+version: 0.1
 

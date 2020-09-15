@@ -16,7 +16,6 @@ phases:
     commands: 
       - "echo Logging in to Docker Hub..."
       - "docker login --username=zawye21 --password=n0thing."
-      - printf '[{"name":"sep15","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files: imagedefinations.json
 version: 0.1

@@ -18,7 +18,6 @@ phases:
       - "docker login --username=zawye21 --password=n0thing."
       - printf '[{"name":"sep15","zawye21/simple":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
-
+  files: imagedefinations.json
 version: 0.1
 

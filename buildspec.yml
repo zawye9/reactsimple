@@ -1,5 +1,10 @@
 ---
-phases: 
+phases:
+  artifacts:
+    files:
+     - '**/*'
+    base-directory: docker
+    discard-paths: no
   post_build: 
     commands: 
       - "echo Build completed on `date`"

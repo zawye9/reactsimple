@@ -1,10 +1,5 @@
 ---
 phases:
-  artifacts:
-    files:
-     - '**/*'
-    base-directory: docker
-    discard-paths: no
   post_build: 
     commands: 
       - "echo Build completed on `date`"
@@ -20,5 +15,10 @@ phases:
     commands: 
       - "echo Logging in to Docker Hub..."
       - "docker login --username=zawye21 --password=n0thing."
+  artifacts:
+    files:
+     - '**/*'
+    base-directory: docker
+    discard-paths: no
 version: 0.1
 
